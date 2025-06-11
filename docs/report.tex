@@ -89,41 +89,45 @@ Regression models were trained with parameters given below
 
 \textbf{Random Forest:}
 \begin{itemize}
-    \item Number of trees: 50, 100
+    \item Number of trees: 100
     \item Maximum forest depth: 5
 \end{itemize}
 
 \textbf{Support Vector Machine:}
 \begin{itemize}
-    \item Regularization parameter (C): 0.1, 1, 10
+    \item Regularization parameter (C): 1
 \end{itemize}
 
 \textbf{AdaBoost:}
 \begin{itemize}
-    \item Number of estimators: 50, 100, 200
-    \item Learnign rate: 0.5, 1, 1.5
+    \item Number of estimators: 50
+    \item Learnign rate: 0.5
 \end{itemize}
 
 \textbf{Naive Bayes:}
 \begin{itemize}
-    \item Variance smoothing: $10^{-9}$, $10^{-8}$, $10^{-7}$
+    \item Variance smoothing: $10^{-9}$
 \end{itemize}
 
 \textbf{Random Forest (With Class Weights):}
 \begin{itemize}
-    \item Number of trees: 50, 100
+    \item Number of trees: 100
     \item Maximum forest depth: 5
-    \item Class weights: \{Healthy: 1, Diseased: 5\}, \{Healthy: 1, Diseased: 10\}, \{Healthy: 1, Diseased: 20\}, \{Healthy: 1, Diseased: 50\}
+    \item Class weights: \{Healthy: 1, Diseased: 10\}
 \end{itemize}
 
 \textbf{AdaBoost (With Class Weigths):}
 \begin{itemize}
-    \item Number of estimators: 50, 100, 200
-    \item Learnign rate: 0.5, 1, 1.5
-    \item Class weights: \{Healthy: 1, Diseased: 5\}, \{Healthy: 1, Diseased: 10\}, \{Healthy: 1, Diseased: 20\}, \{Healthy: 1, Diseased: 50\}
+    \item Number of estimators: 50
+    \item Learnign rate: 0.5
+    \item Class weights: \{Healthy: 1, Diseased: 5\}
 \end{itemize}
 
+Parameters were tuned to yield the best results %! very subjective xddd
+
 The last two models are supplemented with class weights, whose role is to minimize false-positives of Classes with higher weight.
+
+\section{Regression Results}
 
 %! below is nothing needed
 \section{Ease of Use}

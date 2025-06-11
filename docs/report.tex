@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
+\usepackage{hyperref}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
@@ -24,7 +25,7 @@ should not be used}
 \IEEEauthorblockA{to\_add}
 \and
 \IEEEauthorblockN{Piotr Kaczorowski}
-\IEEEauthorblockA{to\_add}
+\IEEEauthorblockA{197736}
 \and
 \IEEEauthorblockN{Paweł Rietz}
 \IEEEauthorblockA{to\_add}
@@ -62,7 +63,18 @@ range of evaluation metrics such as accuracy, precision, recall, F1-score, and t
 
 By conducting a comparison of these models, we aim to identify which approaches offer the most reliable and interpretable predictions.
 
+\section{Methodology}
+Data used for the analyse of used algorithms has been 
+%! I'm not sure - check this
+obtained from the UCI Machine Learning Repository \footnote{\url{https://archive.ics.uci.edu/ml/datasets/heart+Disease}}.
+The dataset contains various clinical features such as age, sex, chest pain type,
+resting blood pressure, cholesterol, fasting blood sugar,
+resting electrocardiographic results, maximum heart rate achieved,
+exercise induced angina, ST depression, and others. Prior to training
+data was divided between train set and test set. First one has been used
+for model training the other one to test accuracy of used algorithm.
 
+%! below is nothing needed
 \section{Ease of Use}
 
 \subsection{Maintaining the Integrity of the Specifications}

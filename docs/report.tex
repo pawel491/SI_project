@@ -129,6 +129,24 @@ The last two models are supplemented with class weights, whose role is to minimi
 
 \section{Regression Results}
 
+Below is the figure with data of each model accuracy:
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{../src/plots/accuracy_cv_plot.png}
+    \caption{Accuracy comparison of different classification models used in heart disease prediction.}
+    \label{fig:accuracy}
+\end{figure}
+
+As we can observe, the accuracy of models: [rf, svm, rf_2, ada_2] averages around 97-99\% accuracy.
+With the non-weight AdaBoost implementation falling only a few houndreds of a precent behind.
+The Naive Bayes method yields the worst results by far, scoring +-80\%, significanly worse than other
+mentioned methods.
+
+%! dodać informację o SD.
+
+Below is a table of other measurement metrics:
+
+
 %! below is nothing needed
 \section{Ease of Use}
 

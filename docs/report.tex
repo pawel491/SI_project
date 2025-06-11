@@ -74,6 +74,57 @@ exercise induced angina, ST depression, and others. Prior to training
 data was divided between train set and test set. First one has been used
 for model training the other one to test accuracy of used algorithm.
 
+\section{Implementation}
+
+The implementation has been realised using the python language. Core AI learning
+is done using the open-source scikit-learn library, widely used and proven. 
+
+The initial data gets split into testing and training datasets, with training
+dataset being 75\% of the whole dataset. And test dataset 25\% respectively.
+
+All of the datasets are split between parameters, and the outcome
+(In our case, if the patient with given parameters has died).
+
+Regression models were trained with parameters given below
+
+\textbf{Random Forest:}
+\begin{itemize}
+    \item Number of trees: 50, 100
+    \item Maximum forest depth: 5
+\end{itemize}
+
+\textbf{Support Vector Machine:}
+\begin{itemize}
+    \item Regularization parameter (C): 0.1, 1, 10
+\end{itemize}
+
+\textbf{AdaBoost:}
+\begin{itemize}
+    \item Number of estimators: 50, 100, 200
+    \item Learnign rate: 0.5, 1, 1.5
+\end{itemize}
+
+\textbf{Naive Bayes:}
+\begin{itemize}
+    \item Variance smoothing: $10^{-9}$, $10^{-8}$, $10^{-7}$
+\end{itemize}
+
+\textbf{Random Forest (With Class Weights):}
+\begin{itemize}
+    \item Number of trees: 50, 100
+    \item Maximum forest depth: 5
+    \item Class weights: \{Healthy: 1, Diseased: 5\}, \{Healthy: 1, Diseased: 10\}, \{Healthy: 1, Diseased: 20\}, \{Healthy: 1, Diseased: 50\}
+\end{itemize}
+
+\textbf{AdaBoost (With Class Weigths):}
+\begin{itemize}
+    \item Number of estimators: 50, 100, 200
+    \item Learnign rate: 0.5, 1, 1.5
+    \item Class weights: \{Healthy: 1, Diseased: 5\}, \{Healthy: 1, Diseased: 10\}, \{Healthy: 1, Diseased: 20\}, \{Healthy: 1, Diseased: 50\}
+\end{itemize}
+
+The last two models are supplemented with class weights, whose role is to minimize false-positives of Classes with higher weight.
+
 %! below is nothing needed
 \section{Ease of Use}
 

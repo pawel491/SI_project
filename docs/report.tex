@@ -32,20 +32,20 @@
 
 \maketitle
 
-\begin{abstract}
-This study evaluates the effectiveness of several machine learning classifiers in predicting heart disease. 
-Models are trained and validated on a public dataset using cross-validation. 
-Performance is assessed using standard metrics. 
-The results provide insight into the most reliable methods for early heart disease prediction.
-\end{abstract}
+% \begin{abstract}
+% This study evaluates the effectiveness of several machine learning classifiers in predicting heart disease. 
+% Models are trained and validated on a public dataset using cross-validation. 
+% Performance is assessed using standard metrics. 
+% The results provide insight into the most reliable methods for early heart disease prediction.
+% \end{abstract}
 
 
 
-\begin{IEEEkeywords}
+% \begin{IEEEkeywords}
 
-% to delete?
-%component, formatting, style, styling, insert
-\end{IEEEkeywords}
+% % to delete?
+% %component, formatting, style, styling, insert
+% \end{IEEEkeywords}
 
 \section{Introduction}
 
@@ -128,7 +128,7 @@ Regression models were trained with parameters given below
 \textbf{AdaBoost:}
 \begin{itemize}
     \item Number of estimators: 50
-    \item Learnign rate: 0.5
+    \item Learning rate: 0.5
 \end{itemize}
 
 \textbf{Naive Bayes:}
@@ -143,7 +143,7 @@ Regression models were trained with parameters given below
     \item Class weights: \{Healthy: 1, Diseased: 10\}
 \end{itemize}
 
-\textbf{AdaBoost (With Class Weigths):}
+\textbf{AdaBoost (With Class Weights):}
 \begin{itemize}
     \item Number of estimators: 50
     \item Learnign rate: 0.5
@@ -176,17 +176,18 @@ Below is the figure with data of each model accuracy:
 \end{figure}
 
 As we can observe, the accuracy of models: [rf, svm, rf\_2, ada\_2] averages around 97-99\% accuracy.
-The Naive Bayes method yields the worst results by far, scoring +-80\%, significanly worse than other
+The Naive Bayes method yields the worst results by far, scoring +-80\%, significantly worse than other
 mentioned methods.
 \\ 
 
-To provide a more comprehensive comparison, the results in Table~\ref{AUC_tab} include not only the average values of key metrics,  
+To provide a more comprehensive comparison, the results in Table~\ref{auc_tab} include not only the average values of key metrics,  
 but also their standard deviations, calculated across all cross-validation folds. \\
 The lower the SD, the more stable and reliable behavior of the model is.
 
 
 \begin{table}[H]
-    \caption{Evaluation metrics (mean ± standard deviation)}
+    \caption{Evaluation metrics (mean $\pm$ standard deviation)}
+    \label{auc_tab}
     \begin{center}
         \begin{tabular}{|c|c|c|c|}
             \hline
@@ -201,9 +202,8 @@ The lower the SD, the more stable and reliable behavior of the model is.
             \hline
         \end{tabular}
     \end{center}
-    \label{AUC_tab}
 \end{table}
-Table \ref{AUC_tab} summarizes the accuracy, AUC and recall metrics
+Table \ref{auc_tab} summarizes the accuracy, AUC and recall metrics
 for each tested model, highlighting their performance in
 classifying the data accurately. The Random Forest model achieved
 the highest percentage of desired outputs on the test data.
@@ -239,7 +239,7 @@ and also exhibit higher standard deviation, indicating less stability across dif
 
 \section{Conclusion}
 
-The simulation shows promising results. With +- 99\% overall accuracy for best models, and \<2\% false negatives rate,
+The simulation shows promising results. With +- 99\% overall accuracy for best models, and $<$2\% false negatives rate,
 the AI models may serve as a great tool for medical professionals to help correcty identify heart diseases. \\
 
 Two learning approaches standed out boasting high accuracy and low false negative rates, the ones being Random Forest and AdaBoost.

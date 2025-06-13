@@ -102,11 +102,12 @@ To evaluate the performance of the models, we used the following standard metric
 
 \section{Implementation}
 
-The implementation has been realised using the python language. Core AI learning
-is done using the open-source scikit-learn library, widely used and proven. 
+The implementation is developed using the python language. The model training
+is done using the scikit-learn library, a modern and high performance library, containing
+most of the learning algorithms used in this study.
 
 The initial data gets split into testing and training datasets, with training
-dataset being 75\% of the whole dataset. And test dataset 25\% respectively.
+dataset taking 75\% of the whole dataset. The test dataset containing 25\% respectively.
 
 All of the datasets are split between parameters, and the outcome
 (In our case, if the patient with given parameters has died).
@@ -153,8 +154,12 @@ Parameters were tuned to yield the best results %! very subjective xddd
 
 The last two models are supplemented with class weights, whose role is to minimize false-positives of Classes with higher weight.
 
-
-
+Additional libraries that were used:
+\begin{itemize}
+    \item Pandas, for numerical operations
+    \item Seaborn, to display the data
+    \item Matplotlib, to draw the plots
+\end{itemize}
 
 \section{Regression Results}
 
@@ -234,5 +239,24 @@ and also exhibit higher standard deviation, indicating less stability across dif
 
 \section{Conclusion}
 
+The simulation shows promising results. With +- 99\% overall accuracy for best models, and \<2\% false negatives rate,
+the AI models may serve as a great tool for medical professionals to help correcty identify heart diseases. \\
+
+Two learning approaches standed out boasting high accuracy and low false negative rates, the ones being Random Forest and AdaBoost.
+Introducing weights into the learning process, effectively reduced false negative flags, which is crucial for medical use. This
+modification didn't degrade the overall accuracy of the models as well. \\
+
+The data used to train the models, included comprehensive measurements such as creatinine phosphokinase levels
+in blood, which may not be readily available when diagnosing a patient, which makes the model less usable, when
+little or no data are given about the patient. \\
+
+Another issue which might arise is the invisible nature of the model's thinking process.
+When getting a result, little is known about how the decision was made, and with what degree
+of confidence. In such a critical sector, it creates great uncertainity about model's decisions \\
+
+In conclusion, the machine learning approach shows great potential of correctly identifying heart diseases.
+The models show high overall accuracy, and little false negatives. On the other hand, the data used was very comprehensive,
+and little is known about the performance of the models with less training data. Models with greater decision making visability
+would be more desired, giving medical professionals crucial information needed to make the final decision.
 
 \end{document}
